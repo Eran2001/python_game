@@ -1,5 +1,9 @@
-def fizz_buzz(number):
-  for number in range(1, number):
+import random
+
+random_number = random.randint(20, 50)
+
+def fizz_buzz():
+  for number in range(1, random_number):
     if number % 5 == 0 and number % 3 == 0:
       print("FizzBuzz")
     elif number % 5 == 0:
@@ -9,4 +13,4 @@ def fizz_buzz(number):
     else:
       print(number)
       
-fizz_buzz(16)
+fizz_buzz()
