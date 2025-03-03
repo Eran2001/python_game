@@ -1,9 +1,9 @@
 import random
 
-random_number = random.randint(20, 50)
+user_input = int(input("Enter your number: "))
 
 def fizz_buzz():
-  for number in range(1, random_number):
+  for number in range(1, user_input):
     if number % 5 == 0 and number % 3 == 0:
       print("FizzBuzz")
     elif number % 5 == 0:
