@@ -1,6 +1,6 @@
-class Car:
-  def __init__(self, model, color):
-    self.model = model
-    self.color = color
+from turtle import Turtle
+
+myTurtle = Turtle()
+
     
   
