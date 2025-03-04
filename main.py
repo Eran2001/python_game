@@ -1,6 +1,8 @@
-from turtle import Turtle
+from turtle import Turtle, Screen
 
-myTurtle = Turtle()
+my_turtle = Turtle()
 
-print(myTurtle.color())
+my_screen = Screen()
+print(my_screen.canvheight)
+print(my_screen.canvwidth)
   
