@@ -6,13 +6,4 @@ with open("website.html") as file:
   
 soup = BeautifulSoup(contents, "lxml")
 
-print(soup.title.text)
-print(soup.title.string)
-
 print(soup.a)
-
-print(soup.find_all("a"))
-
-print(soup.find("a").text)
-
-print(soup.find("a")["href"])
