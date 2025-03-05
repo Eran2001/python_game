@@ -7,3 +7,7 @@ with open("website.html") as file:
 soup = BeautifulSoup(contents, "lxml")
 
 print(soup.a)
+
+print(soup.find_all(name="a"))
+
+print(soup.find(name="h1", id="name"))
