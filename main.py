@@ -10,7 +10,8 @@ response = URL.text
 
 soup = BeautifulSoup(response, "lxml")
 
-heading = soup.find(name="h3")
+headings = soup.find_all(name="h3")
 
-print(heading.text.strip())
+for heading in headings:
+    print(heading.text.strip())
 
