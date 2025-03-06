@@ -1,17 +1,10 @@
-from bs4 import BeautifulSoup
-import lxml
-import requests
+from selenium import webdriver
+from selenium.webdriver.common.by import By
 
-headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/131.0"}
+driver = webdriver.Chrome()
+driver.get("https://www.python.org/")
 
-URL = requests.get("https://www.billboard.com/charts/hot-100/2000-08-12/", headers=headers)
+search = driver.find_element(By.NAME, "q")
+print(search.tag_name)
 
-response = URL.text
-
-soup = BeautifulSoup(response, "lxml")
-
-headings = soup.find_all(name="h3")
-
-for heading in headings:
-    print(heading.text.strip())
-
+driver.quit()
