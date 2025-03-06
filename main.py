@@ -1,4 +1,6 @@
 from bs4 import BeautifulSoup
 import lxml
+import requests
 
-print("hello")
+response = requests.get("https://news.ycombinator.com/news")
+print(response.text)
