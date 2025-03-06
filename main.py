@@ -12,4 +12,8 @@ all_movies = soup.find_all(name="h3", class_="title")
 
 
 movie_title = [movie.getText() for movie in all_movies]
-print(movie_title[::-1])
+movies = movie_title[::-1]
+
+with open("Movies.txt", "w") as file:
+  for movie in movies:
+    file.write(f"{movie}\n")
